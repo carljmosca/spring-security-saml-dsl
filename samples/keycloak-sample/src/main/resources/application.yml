@@ -1,0 +1,14 @@
+server:
+  port: 8443
+  ssl:
+    enabled: true
+    key-alias: spring
+    key-store: src/main/resources/saml/keystore.jks
+    key-store-password: secret
+
+security:
+  saml2:
+      metadata-url: https://localhost:18443/auth/realms/saml-demo/protocol/saml/descriptor#security.saml2.metadata-url
+
+hostname:
+  preferred: localhost:8443
