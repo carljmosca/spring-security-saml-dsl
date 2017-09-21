@@ -1,0 +1,2 @@
+sudo cp "$JAVA_HOME/jre/lib/security/cacerts" "$JAVA_HOME/jre/lib/security/cacerts.bak" 
+sudo keytool -noprompt -storepass changeit -keystore "$JAVA_HOME/jre/lib/security/cacerts" -import -file localhost.crt -alias keycloak-test
