@@ -10,6 +10,10 @@ buildscript {
     }
 }
 
+if (!hasProperty('mainClass')) {
+    ext.mainClass = 'com.example.ColombiaApplication'
+}
+
 apply plugin: 'java'
 apply plugin: 'org.springframework.boot'
 
